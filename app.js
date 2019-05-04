@@ -10,7 +10,7 @@ const router = require('./routes');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/shortify');
+mongoose.connect('mongodb://admin:admin1@ds149706.mlab.com:49706/shortlink');
 
 mongoose.connection.on('open', () => {
   console.log(`MongoDB connected: ${mongoose.connection.db.databaseName}`);
