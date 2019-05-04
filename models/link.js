@@ -6,7 +6,8 @@ const CounterSchema = require('./counter');
 const LinkSchema = new Schema({
     _id: { type: Number },
     url: { type: String, required: true },
-    hits: { type: Number, default: 0 }
+    hits: { type: Number, default: 0 }, 
+    linkUrl: {type: String, required: true}
 }, {
     timestamps: true,
     collection: 'links'

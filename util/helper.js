@@ -17,6 +17,7 @@ const encode = (num) => {
         code = alphabets.charAt(num % base) + code;
         num = Math.floor(num / base);
     }
+    console.log(code);
     return code;
 };
 

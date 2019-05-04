@@ -14,10 +14,11 @@ const saveUrl = (req, res) => {
         const link = new LinkSchema(req.body);
         link.save((err, doc) => {
             if(err) {
-                return res.status(500).json({ message: 'Internal Server Error', error: err });
+               return res.status(500).json({ message: 'Internal Server Error', error: err });
             }
 
             if(doc) {
+                console.log(doc);
                 const code = _h.encode(doc._id);
                 res.status(201).json({
                     code: code,
