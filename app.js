@@ -26,9 +26,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(userAgent.express());
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
-  res.setheader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  // res.setHeader('Access-Control-Allow-Origin', '*');
+  // res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+  // res.setheader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
     where.is(req.ip, (err, result) => {
         req.geoip = result;
         next();
