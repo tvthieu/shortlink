@@ -65,7 +65,10 @@ const getUrl = (req, res) => {
                }
 
                if(doc) {
-                   res.status(302).redirect(_h.addHttp(link.url));
+                //    res.status(302).redirect(_h.addHttp(link.url));
+                   res.status(201).json({
+                    link: link.url
+                });
                }
            });
 
