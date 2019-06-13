@@ -7,7 +7,10 @@ const LinkSchema = new Schema({
     _id: { type: Number },
     url: { type: String, required: true },
     hits: { type: Number, default: 0 }, 
-    linkUrl: {type: String, required: true}
+    linkUrl: {type: String, required: true},
+    title: {type: String},
+    srcImg: {type: String},
+    description:{type: String}
 }, {
     timestamps: true,
     collection: 'links'
