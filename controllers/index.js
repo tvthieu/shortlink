@@ -1,4 +1,4 @@
-const LinkSchema = require('../models/link');
+const LinkSchema = require('../models/link').default.default.default;
 const AnalyticsSchema = require('../models/analytics');
 const isUrl = require('../node_modules/validator/lib/isURL');
 const _h = require('../util/helper');
@@ -67,7 +67,10 @@ const getUrl = (req, res) => {
                if(doc) {
                 //    res.status(302).redirect(_h.addHttp(link.url));
                    res.status(201).json({
-                    link: link.url
+                    link: link.url, 
+                    title: link.title,
+                    srcImg: link.srcImg,
+                    description: LinkSchema.description
                 });
                }
            });
